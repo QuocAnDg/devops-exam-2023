@@ -1,5 +1,11 @@
 // TODO: Add here the function to validate
 
 const isEmpty = (label) => !label || label.length === 0;
+const verifyLength = (label) => {
+    return false;
+};
 
-exports.isEmpty = isEmpty;
+module.exports = {
+    isEmpty,
+    verifyLength,
+};
