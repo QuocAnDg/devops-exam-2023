@@ -22,4 +22,8 @@ describe("validations tests suites - verifyLength", () => {
         const result = verifyLength("");
         expect(result).toBe(false);
     });
+    test("should return false if label is > 8", () => {
+        const result = verifyLength("bonjourbonjour");
+        expect(result).toBe(true);
+    });
 });

@@ -2,7 +2,10 @@
 
 const isEmpty = (label) => !label || label.length === 0;
 const verifyLength = (label) => {
-    return false;
+    if (label < 8){
+        return false;
+    }
+    return true;
 };
 
 module.exports = {
