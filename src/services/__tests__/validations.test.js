@@ -33,4 +33,8 @@ describe("validations tests suites - verifySpecial", () => {
         const result = verifySpecial("bonjour");
         expect(result).toBe(false);
     });
+    test("should return false if label has special characters", () => {
+        const result = verifySpecial("bonjour*");
+        expect(result).toBe(true);
+    });
 });

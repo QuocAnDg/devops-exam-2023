@@ -8,6 +8,11 @@ const verifyLength = (label) => {
     return true;
 };
 const verifySpecial = (label) => {
+    const labelMatch = label.match('/[^a-zA-Z*!]/');
+
+    if (labelMatch !== null) {
+      return true;
+    }
     return false;
 };
 
