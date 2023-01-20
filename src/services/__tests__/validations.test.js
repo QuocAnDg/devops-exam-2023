@@ -1,4 +1,4 @@
-const { isEmpty, verifyLength } = require("../validations");
+const { isEmpty, verifyLength, verifySpecial } = require("../validations");
 
 describe("validations tests suites - isEmpty", () => {
     test("should return true as the label is undefined", () => {
@@ -25,5 +25,12 @@ describe("validations tests suites - verifyLength", () => {
     test("should return false if label is > 8", () => {
         const result = verifyLength("bonjourbonjour");
         expect(result).toBe(true);
+    });
+});
+
+describe("validations tests suites - verifySpecial", () => {
+    test("should return false if label has 0 special characters", () => {
+        const result = verifySpecial("bonjour");
+        expect(result).toBe(false);
     });
 });

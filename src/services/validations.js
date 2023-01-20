@@ -7,8 +7,13 @@ const verifyLength = (label) => {
     }
     return true;
 };
+const verifySpecial = (label) => {
+    return false;
+};
 
 module.exports = {
     isEmpty,
     verifyLength,
+    verifySpecial
+
 };
