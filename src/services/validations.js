@@ -2,7 +2,7 @@
 
 const isEmpty = (label) => !label || label.length === 0;
 const verifyLength = (label) => {
-    if (label < 8){
+    if (label < 8) {
         return false;
     }
     return true;
